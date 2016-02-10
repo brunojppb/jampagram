@@ -6,7 +6,7 @@ This is a really simple app to illustrate the concept of API-First at the Jampa 
 
 * Ruby 2.2.3
 
-* Rails 5.0.0.beta2
+* Rails 4.2.4
 
 * SQLite3
 
