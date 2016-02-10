@@ -8,6 +8,7 @@ gem 'devise',                           '3.5.6'
 gem 'devise_token_auth',                '0.1.37'
 gem 'omniauth',                         '1.3.1'
 gem 'active_model_serializers',         github: "rails-api/active_model_serializers"
+gem 'carrierwave',                      '0.10.0'
 
 group :development, :test do
   gem 'byebug',                         '8.2.2'

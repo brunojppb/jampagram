@@ -51,6 +51,11 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
     devise (3.5.6)
@@ -165,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers!
   byebug (= 8.2.2)
+  carrierwave (= 0.10.0)
   devise (= 3.5.6)
   devise_token_auth (= 0.1.37)
   factory_girl_rails (= 4.6.0)
