@@ -17,7 +17,7 @@ class Api::V1::PhotosController < ApplicationController
     end
   end
 
-  def destoy
+  def destroy
     photo = current_api_user.photos.find(params[:id])
     if photo && photo.destroy
       head 204
