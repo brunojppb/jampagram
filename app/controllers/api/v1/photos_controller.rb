@@ -4,7 +4,7 @@ class Api::V1::PhotosController < ApplicationController
   before_action :decode_image_upload, only: [:create]
 
   def index
-    render json: current_api_user.photos, status: 200
+    render json: Photo.order(created_at: :desc), status: 200
   end
 
   def create
