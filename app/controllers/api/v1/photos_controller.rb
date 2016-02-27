@@ -1,6 +1,6 @@
 class Api::V1::PhotosController < ApplicationController
 
-  before_action :authenticate_api_user!, only: [:index, :create, :destroy]
+  before_action :authenticate_api_user!, only: [:create]
   before_action :decode_image_upload, only: [:create]
 
   def index
@@ -8,21 +8,11 @@ class Api::V1::PhotosController < ApplicationController
   end
 
   def create
-    puts "PARAMS: #{params}"
     photo = current_api_user.photos.build(photo_params)
     if photo.save
-      render json: photo, status: 202
+      render json: photo, status: :created
     else
       render json: { errors: photo.errors }, status: :unprocessable_entity
-    end
-  end
-
-  def destroy
-    photo = current_api_user.photos.find(params[:id])
-    if photo && photo.destroy
-      head 204
-    else
-      render json: { errors: 'photo not found' }, status: :unprocessable_entity
     end
   end
 

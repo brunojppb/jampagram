@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     scope module: :v1, path: :v1 do
-      resources :photos, only: [:create, :index, :destroy]
+      resources :photos, only: [:create, :index]
     end
   end
 
